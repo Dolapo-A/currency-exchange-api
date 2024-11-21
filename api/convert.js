@@ -25,18 +25,56 @@ async function getExchangeRates() {
 	return exchangeRates;
 }
 
+const currencyNames = {
+	USD: "United States Dollar",
+	EUR: "Euro",
+	GBP: "British Pound Sterling",
+	JPY: "Japanese Yen",
+	AUD: "Australian Dollar",
+	CAD: "Canadian Dollar",
+	CHF: "Swiss Franc",
+	CNY: "Chinese Yuan",
+	HKD: "Hong Kong Dollar",
+	NZD: "New Zealand Dollar",
+	SEK: "Swedish Krona",
+	KRW: "South Korean Won",
+	SGD: "Singapore Dollar",
+	NOK: "Norwegian Krone",
+	MXN: "Mexican Peso",
+	INR: "Indian Rupee",
+	RUB: "Russian Ruble",
+	ZAR: "South African Rand",
+	TRY: "Turkish Lira",
+	BRL: "Brazilian Real",
+	TWD: "Taiwan New Dollar",
+	DKK: "Danish Krone",
+	PLN: "Polish Złoty",
+	THB: "Thai Baht",
+	IDR: "Indonesian Rupiah",
+	HUF: "Hungarian Forint",
+	CZK: "Czech Koruna",
+	ILS: "Israeli New Shekel",
+	CLP: "Chilean Peso",
+	PHP: "Philippine Peso",
+	AED: "United Arab Emirates Dirham",
+	COP: "Colombian Peso",
+	SAR: "Saudi Riyal",
+	MYR: "Malaysian Ringgit",
+	RON: "Romanian Leu",
+};
+
 export default async function handler(req, res) {
 	// Set CORS headers
-	res.setHeader('Access-Control-Allow-Credentials', true);
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS');
+	res.setHeader("Access-Control-Allow-Credentials", true);
+	res.setHeader("Access-Control-Allow-Origin", "*");
+	res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS");
 	res.setHeader(
-		'Access-Control-Allow-Headers',
-		'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+		"Access-Control-Allow-Headers",
+		"X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
 	);
 
 	// Handle OPTIONS request for CORS preflight
-	if (req.method === 'OPTIONS') {
+	if (req.method === "OPTIONS") {
 		return res.status(200).end();
 	}
 
