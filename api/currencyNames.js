@@ -78,7 +78,7 @@ export const currencyNames = {
 	GYD: "Guyanaese Dollar",
 	HNL: "Honduran Lempira",
 	HRK: "Croatian Kuna",
-    HTG: "Haitian Gourde",
+	HTG: "Haitian Gourde",
 	IMP: "Isle of Man Pound",
 	IQD: "Iraqi Dinar",
 	IRR: "Iranian Rial",
