@@ -31,7 +31,6 @@ The Currency Converter API provides real-time currency conversion and exchange r
 		"rate": 0.85,
 		"name": "Euro"
 	}
-	// ... other currencies
 }
 ```
 
